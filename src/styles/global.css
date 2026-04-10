@@ -1,0 +1,16 @@
+:root {
+  --white: #f1f3f4;
+  --black: #111112;
+  --gray: #202124;
+  --green: #ceead6;
+}
+
+body {
+  background-color: var(--white);
+  background-image: url("../../public/modo-claro.svg");
+  color: var(--black);
+  font-family: "Be Vietnam Pro", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
