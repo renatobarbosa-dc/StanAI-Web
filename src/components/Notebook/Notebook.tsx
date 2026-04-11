@@ -1,3 +1,4 @@
+import { Form } from "../Form/Form";
 import { Ball } from "./Ball";
 import "./Notebook.css";
 
@@ -13,7 +14,7 @@ export function Notebook() {
         </div>
 
         <div className="forms-container">
-            insira o form
+            <Form />
         </div>
       </div>
       

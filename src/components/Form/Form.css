@@ -1,0 +1,14 @@
+.forms-container{
+    text-align: left;
+    border: 1px solid black;
+    margin-top: 2rem; 
+    padding: 4rem 15rem;
+    width: 50%;
+}
+
+.input{
+    margin-left: -14rem;
+    font-size: 1.25rem;
+}
+  
+// remover esses border black depois NAO ESQUECER
