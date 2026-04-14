@@ -1,17 +1,21 @@
 import './Form.css'
+import { Send } from 'lucide-react'
 
 export function Form() {
     return(
         <div className='form-container'>
-            <div className="input">
-                <p>Qual wiki vamos explorar hoje?</p>
-                <input placeholder="https://pt.stardewvalleywiki.com/Stardew_Valley_Wiki"/>
-            </div>
+                <p className='title-forms'>Qual wiki vamos explorar hoje?</p>
 
-            <div className="input">
-                <p>O que você quer saber?</p>
-                <input placeholder="Digite sua pergunta..."/>
-            </div>
+                <div className='form-input'>
+                    <input  placeholder="https://pt.stardewvalleywiki.com/Stardew_Valley_Wiki"/>
+                    <button><Send /></button>
+                </div>
+                
+                <p className='title-forms'>O que você quer saber?</p>
+                <div className='form-input'>
+                    <input  placeholder="Onde fica a cueca do prefeito?"/>
+                    <button><Send /></button>
+                </div>
         </div>
     )
 }
