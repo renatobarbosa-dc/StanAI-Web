@@ -1,3 +1,59 @@
-body {
+html, body, #root {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: var(--green);
+  bottom: 0;
+  left: 0;
+  width: 16rem;
+  height: 100vh;
+  padding: 0.5rem;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-header {
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.menu-title {
+  background-color: var(--green);
   font-family: "Caveat Brush";
 }
+
+.menu{
+  display: flex;
+  flex-direction: column;
+}
+
+.old-page{
+  background-color: var(--white);
+  color: var(--black);
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 0.5rem;
+  border-radius: 25px;
+  border: none;
+  margin: 0.5rem;
+}
+
+.new-page-button-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+.new-page-button {
+  border: none;
+  border-radius: 25px;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: "Be Vietnam Pro", sans-serif;
+  padding: 0.5rem 2rem;
+}
+
