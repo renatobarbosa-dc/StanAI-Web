@@ -1,0 +1,44 @@
+.form-container {
+  width: 100%;
+  max-width: 37.5rem; /* 600px -> rem */
+  margin: 2.5rem auto; /* 40px */
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem; /* ajuda em telas pequenas */
+}
+
+.title-forms {
+  font-size: clamp(0.75rem, 1vw, 0.9rem); /* responsivo */
+  color: var(--black);
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 0.625rem; /* 10px */
+  padding: 0.5rem 1rem;
+}
+
+.form-input input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: clamp(0.75rem, 1vw, 0.9rem);
+  outline: none;
+}
+
+.form-input button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.form-input button svg {
+  width: clamp(1rem, 2vw, 1.25rem); /* 16px → 20px responsivo */
+  height: clamp(1rem, 2vw, 1.25rem);
+  color: var(--black);
+}

@@ -1,0 +1,53 @@
+.notebook {
+  background-color: var(--green);
+  color: var(--black);
+  align-items: left;
+  justify-content: left;
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+
+.ball {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  margin: 1rem;
+  border: 1px solid gray;
+}
+
+.main-container {
+
+  justify-items: center;
+  padding-top: 6rem;
+}
+
+.logo-container {
+  justify-items: center;
+}
+
+.logo-svg {
+
+  width: 10rem;
+}
+
+.logo-title {
+
+  font-family: "Caveat Brush";
+  font-size: 2rem;
+  flex: 1;
+}
+
+.forms-container {
+  text-align: left;
+
+  margin-top: 2rem;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+/* // remover esses border black depois NAO ESQUECER */

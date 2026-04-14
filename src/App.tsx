@@ -1,5 +1,10 @@
-export function App () {
+import { Notebook } from "./components/Notebook/Notebook";
+import "./styles/global.css";
+
+export function App() {
   return (
-    <h1>insira texto</h1>
-  )
+    <>
+      <Notebook />
+    </>
+  );
 }
