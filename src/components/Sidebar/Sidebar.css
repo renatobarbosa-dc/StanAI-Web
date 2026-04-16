@@ -131,3 +131,35 @@ html, body, #root {
   background-color: var(--white-2);
   color: var(--gray);
 }
+
+.theme-button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--black);
+}
+
+.theme-button:hover {
+  transform: scale(1.1);
+  background-color: var(--white-2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-button:active {
+  transform: scale(0.95);
+}
