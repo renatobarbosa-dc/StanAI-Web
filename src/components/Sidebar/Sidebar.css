@@ -3,10 +3,6 @@ html, body, #root {
   padding: 0;
 }
 
-.arrow-left {
-  cursor: pointer;
-}
-
 .sidebar {
   position: fixed;
   background-color: var(--green);
@@ -16,6 +12,13 @@ html, body, #root {
   height: 100vh;
   padding: 0.5rem;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-left {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-header {
@@ -29,16 +32,18 @@ html, body, #root {
 .menu-title {
   background-color: var(--green);
   font-family: "Caveat Brush";
+  margin: 0;
 }
 
-.menu{
+.menu {
   display: flex;
   flex-direction: column;
 }
 
-.old-page{
+.old-page {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--white);
   color: var(--black);
   font-family: "Be Vietnam Pro", sans-serif;
@@ -46,21 +51,25 @@ html, body, #root {
   border-radius: 25px;
   border: none;
   margin: 0.5rem;
+  cursor: pointer;
+  width: calc(100% - 1rem);
+  transition: background-color 0.2s;
 }
 
-.old-page:hover{
+.old-page:hover {
   background-color: var(--white-2);
   color: var(--gray);
-  transition: 0.2s;
 }
 
 .trash-icon {
   cursor: pointer;
+  flex-shrink: 0;
 }
 
-.new-page-button-container{
+.new-page-button-container {
   display: flex;
   justify-content: center;
+  margin: 1rem 0;
 }
 
 .new-page-button {
@@ -72,15 +81,53 @@ html, body, #root {
   padding: 0.5rem 2rem;
   cursor: pointer;
   transition: 0.2s;
+  white-space: nowrap;
 }
 
-.new-page-button:hover{
+.new-page-button:hover {
   background-color: var(--white-2);
   color: var(--gray);
 }
 
-.moon-container {
-  margin-top: 4rem;
+.recents {
+  margin-left: 1rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--black);
 }
 
+.moon-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
 
+.sidebar-collapsed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.arrow-right {
+  cursor: pointer;
+  background-color: var(--green);
+  padding: 0.5rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  transition: 0.2s;
+  border: 1px solid gray;
+}
+
+.arrow-right:hover {
+  background-color: var(--white-2);
+  color: var(--gray);
+}
