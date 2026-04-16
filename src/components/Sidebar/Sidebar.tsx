@@ -1,5 +1,5 @@
 import "./Sidebar.css";
-import { ChevronLeft, Moon } from "lucide-react";
+import { ChevronLeft, Moon, Trash } from "lucide-react";
 
 export function ChatSidebar() {
   return (
@@ -8,7 +8,7 @@ export function ChatSidebar() {
         <h1 className="menu-title">StanAI</h1>
 
         <div className="arrow-left">
-          <ChevronLeft></ChevronLeft>
+          <ChevronLeft/>
         </div>
       </div>
 
@@ -19,13 +19,24 @@ export function ChatSidebar() {
       <p className="recents">Recentes:</p>
 
       <div className="menu">
-        <button className="old-page">babd</button>
-        <button className="old-page">inwew</button>
-        <button className="old-page">niwuqvbr</button>
+        <button className="old-page">
+          Resident Evil Wiki
+          <Trash className="trash-icon" size="1rem"/>
+        </button>
+
+        <button className="old-page">
+          Silent Hill Wiki
+          <Trash className="trash-icon" size="1rem"/>
+        </button>
+
+        <button className="old-page">
+          Metal Gear Wiki
+          <Trash className="trash-icon" size="1rem"/>
+        </button>
       </div>
 
      <div className="moon-container">
-       <Moon></Moon>
+       <Moon />
      </div>
     </div>
   );

@@ -3,6 +3,10 @@ html, body, #root {
   padding: 0;
 }
 
+.arrow-left {
+  cursor: pointer;
+}
+
 .sidebar {
   position: fixed;
   background-color: var(--green);
@@ -33,6 +37,8 @@ html, body, #root {
 }
 
 .old-page{
+  display: flex;
+  justify-content: space-between;
   background-color: var(--white);
   color: var(--black);
   font-family: "Be Vietnam Pro", sans-serif;
@@ -42,10 +48,19 @@ html, body, #root {
   margin: 0.5rem;
 }
 
+.old-page:hover{
+  background-color: var(--white-2);
+  color: var(--gray);
+  transition: 0.2s;
+}
+
+.trash-icon {
+  cursor: pointer;
+}
+
 .new-page-button-container{
   display: flex;
   justify-content: center;
-
 }
 
 .new-page-button {
@@ -55,5 +70,17 @@ html, body, #root {
   color: var(--black);
   font-family: "Be Vietnam Pro", sans-serif;
   padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+.new-page-button:hover{
+  background-color: var(--white-2);
+  color: var(--gray);
+}
+
+.moon-container {
+  margin-top: 4rem;
+}
+
 
