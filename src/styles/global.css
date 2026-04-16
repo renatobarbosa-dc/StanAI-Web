@@ -1,12 +1,20 @@
 :root {
   --white: #f1f3f4;
+  --white-2: #cfd0d1;
   --black: #111112;
   --gray: #202124;
+  --gray-2: #494b52;
   --green: #ceead6;
 }
 
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: var(--white);
   background-image: url("../../public/modo-claro.svg");
   color: var(--black);
   font-family: "Be Vietnam Pro", sans-serif;
@@ -15,6 +23,10 @@ body {
   justify-content: center;
 }
 
-.notebook{
+.notebook {
   margin-top: 1.5rem;
+}
+
+.App {
+  display: flex;
 }
