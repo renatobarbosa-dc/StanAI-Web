@@ -69,7 +69,8 @@ html, body, #root {
 .new-page-button-container {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 2rem;
+  margin-bottom: 4rem;
 }
 
 .new-page-button {
