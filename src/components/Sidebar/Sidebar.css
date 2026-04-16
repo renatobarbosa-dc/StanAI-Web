@@ -125,11 +125,12 @@ html, body, #root {
   color: black;
   transition: 0.2s;
   border: 1px solid gray;
+  color: var(--black);
 }
 
 .arrow-right:hover {
   background-color: var(--white-2);
-  color: var(--gray);
+  color: var(--black);
 }
 
 .theme-button-container {

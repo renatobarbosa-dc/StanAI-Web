@@ -1,18 +1,13 @@
 import "./Sidebar.css";
-import { ChevronLeft, ChevronRight, Moon, Trash, Sun } from "lucide-react";
+import { ChevronLeft, ChevronRight, Trash } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 
-export function ChatSidebar() {
+export function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(true); 
-
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
-  };
-
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
   };
 
   if (isCollapsed) {
@@ -58,9 +53,7 @@ export function ChatSidebar() {
       </div>
 
       <div className="theme-button-container">
-        <button className="theme-button" onClick={toggleTheme}>
-          {isDarkTheme ? <Moon size="1.2rem" /> : <Sun size="1.2rem" />}
-        </button>
+        <ThemeToggle />
       </div>
     </div>
   );

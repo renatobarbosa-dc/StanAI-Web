@@ -1,12 +1,15 @@
 import { Notebook } from "./components/Notebook/Notebook";
-import { ChatSidebar } from "./components/Sidebar/Sidebar";
+import { Sidebar } from "./components/Sidebar/Sidebar";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import "./styles/global.css";
 
 export function App() {
   return (
-    <div className="App">
-     <ChatSidebar/>
-      <Notebook />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Sidebar/>
+        <Notebook />
+      </div>
+    </ThemeProvider>
   );
 }
