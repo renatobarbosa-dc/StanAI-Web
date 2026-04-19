@@ -19,7 +19,6 @@
 }
 
 .main-container {
-
   justify-items: center;
   padding-top: 6rem;
 }
@@ -29,12 +28,10 @@
 }
 
 .logo-svg {
-
   width: 10rem;
 }
 
 .logo-title {
-
   font-family: "Caveat Brush";
   font-size: 2rem;
   flex: 1;
@@ -42,7 +39,6 @@
 
 .forms-container {
   text-align: left;
-
   margin-top: 2rem;
   margin-left: 25rem;
   margin-right: 25rem;

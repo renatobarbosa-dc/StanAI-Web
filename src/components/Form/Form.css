@@ -25,6 +25,7 @@
   border: none;
   background: transparent;
   font-size: clamp(0.75rem, 1vw, 0.9rem);
+  color: var(--black);
   outline: none;
 }
 
