@@ -18,6 +18,7 @@
   background-color: var(--white);
   border-radius: 0.625rem; /* 10px */
   padding: 0.5rem 1rem;
+  border: 1px solid gray;
 }
 
 .form-input input {
