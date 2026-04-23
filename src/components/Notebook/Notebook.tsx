@@ -2,8 +2,8 @@ import { Ball } from "./Ball"
 import { Form } from "../Form/Form"
 import { Loading } from "../Loading/Loading"
 import { Chat } from "../Chat/Chat"
+import { useState, useEffect } from 'react'
 import "./Notebook.css"
-import { useState } from 'react'
 
 type View = "home" | "loading" | "chat"
 
@@ -12,38 +12,69 @@ interface Message {
   content: string
 }
 
-export function Notebook() {
+interface NotebookProps {
+  activeChat: Chat | null
+  onSaveChat: (chat: Chat) => void
+}
+
+export function Notebook({ activeChat, onSaveChat }: NotebookProps) {
   const [view, setView] = useState<View>("home")
   const [messages, setMessages] = useState<Message[]>([])
   const [wikiUrl, setWikiUrl] = useState("")
   const [isTyping, setIsTyping] = useState(false)
 
+  useEffect(() => {
+    if (activeChat) {
+      setMessages(activeChat.messages)
+      setWikiUrl(activeChat.wikiUrl)
+      setView('chat')
+    } else {
+      setMessages([])
+      setWikiUrl('')
+      setView('home')
+    }
+  }, [activeChat?.id])
+
   const handleSubmit = async (url: string, question: string) => {
     setWikiUrl(url)
-    setView("loading")
+    setView('loading')
 
-    // substituir aqui pela chamada de API real QUANDO TIVER
-    await new Promise(res => setTimeout(res, 2000))
-    const fakeResponse = "Resposta da wiki aqui..."
+    // sua API aqui
+    await new Promise(res => setTimeout(res, 1500))
+    const fakeResponse = 'Resposta da wiki aqui...'
 
-    setMessages([
-      { role: "user", content: question },
-      { role: "ai", content: fakeResponse }
-    ])
-    setView("chat")
+    const newMessages = [
+      { role: 'user' as const, content: question },
+      { role: 'ai' as const, content: fakeResponse }
+    ]
+
+    setMessages(newMessages)
+    setView('chat')
+
+    onSaveChat({
+      id: crypto.randomUUID(),
+      title: question.slice(0, 30), // usa a pergunta como título
+      wikiUrl: url,
+      messages: newMessages
+    })
   }
 
   const handleNewMessage = async (question: string) => {
-    const updated = [...messages, { role: "user" as const, content: question }]
+    const updated = [...messages, { role: 'user' as const, content: question }]
     setMessages(updated)
     setIsTyping(true) // começa loading
-
-    // substituir aqui pela chamada de API real QUANDO TIVER
-    await new Promise(res => setTimeout(res, 1000))
-    const fakeResponse = "Outra resposta da wiki..."
-
+  
+    // sua API aqui — substitua pelo await da chamada real
+    await new Promise(res => setTimeout(res, 1500))
+    const fakeResponse = 'Outra resposta...'
+  
     setIsTyping(false) // para loading
-    setMessages([...updated, { role: "ai" as const, content: fakeResponse }])
+    const final = [...updated, { role: 'ai' as const, content: fakeResponse }]
+    setMessages(final)
+  
+    if (activeChat) {
+      onSaveChat({ ...activeChat, messages: final })
+    }
   }
   
   return (
