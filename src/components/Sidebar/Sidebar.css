@@ -69,7 +69,8 @@ html, body, #root {
 .new-page-button-container {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 2rem;
+  margin-bottom: 4rem;
 }
 
 .new-page-button {
@@ -125,11 +126,12 @@ html, body, #root {
   color: black;
   transition: 0.2s;
   border: 1px solid gray;
+  color: var(--black);
 }
 
 .arrow-right:hover {
   background-color: var(--white-2);
-  color: var(--gray);
+  color: var(--black);
 }
 
 .theme-button-container {

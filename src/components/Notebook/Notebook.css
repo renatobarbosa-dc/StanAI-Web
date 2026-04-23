@@ -1,12 +1,13 @@
 .notebook {
   background-color: var(--green);
   color: var(--black);
-  align-items: left;
-  justify-content: left;
   display: flex;
   padding: 0.5rem;
   border-radius: 50px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  width: 65rem;
+  height: 45rem;
+  position: relative;
 }
 
 .ball {
@@ -19,9 +20,18 @@
 }
 
 .main-container {
-
   justify-items: center;
-  padding-top: 6rem;
+  padding-top: 8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.main-container::-webkit-scrollbar {
+  display: none;
 }
 
 .logo-container {
@@ -29,12 +39,10 @@
 }
 
 .logo-svg {
-
   width: 10rem;
 }
 
 .logo-title {
-
   font-family: "Caveat Brush";
   font-size: 2rem;
   flex: 1;
@@ -42,13 +50,22 @@
 
 .forms-container {
   text-align: left;
-
   margin-top: 2rem;
-  margin-left: 25rem;
-  margin-right: 25rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
   display: flex;
   justify-content: center;
   width: 50%;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: var(--green);
 }
 
 /* // remover esses border black depois NAO ESQUECER */

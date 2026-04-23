@@ -5,17 +5,21 @@
   --gray: #202124;
   --gray-2: #494b52;
   --green: #ceead6;
+  --bg-image: url("../../modo-claro.svg");
 }
 
-body,
-html,
-#root {
-  margin: 0;
-  padding: 0;
+[data-theme="dark"] {
+  --white: #1a1a1a;
+  --white-2: #2a2a2a;
+  --black: #ceead6;
+  --gray: #b0b0b0;
+  --gray-2: #6a6a6a;
+  --green: #111112;
+  --bg-image: url("../../modo-escuro.svg");
 }
 
 body {
-  background-image: url("../../public/modo-claro.svg");
+  background-image: var(--bg-image);
   color: var(--black);
   font-family: "Be Vietnam Pro", sans-serif;
   display: flex;
@@ -30,3 +34,5 @@ body {
 .App {
   display: flex;
 }
+
+

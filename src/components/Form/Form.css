@@ -18,6 +18,7 @@
   background-color: var(--white);
   border-radius: 0.625rem; /* 10px */
   padding: 0.5rem 1rem;
+  border: 1px solid gray;
 }
 
 .form-input input {
@@ -25,6 +26,7 @@
   border: none;
   background: transparent;
   font-size: clamp(0.75rem, 1vw, 0.9rem);
+  color: var(--black);
   outline: none;
 }
 
