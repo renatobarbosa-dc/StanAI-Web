@@ -85,7 +85,7 @@ export function Notebook({ activeChat, onSaveChat }: NotebookProps) {
         {view === "home" && (
           <>
             <div className="logo-container">
-              <img className="logo-svg" src="src/assets/maria-teresa.png" />
+              <img className="logo-svg" src="src/assets/stan_dark.png" />
               <div className="logo-title">StanAI</div>
             </div>
             <div className="forms-container">

@@ -1,22 +1,22 @@
 .form-container {
   width: 100%;
-  max-width: 37.5rem; /* 600px -> rem */
-  margin: 2.5rem auto; /* 40px */
+  max-width: 37.5rem;
   display: flex;
   flex-direction: column;
-  padding: 0 1rem; /* ajuda em telas pequenas */
+  gap: 0.5rem;
 }
 
 .title-forms {
-  font-size: clamp(0.75rem, 1vw, 0.9rem); /* responsivo */
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   color: var(--black);
+  margin: 0.5rem 0 0.25rem;
 }
 
 .form-input {
   display: flex;
   align-items: center;
   background-color: var(--white);
-  border-radius: 0.625rem; /* 10px */
+  border-radius: 0.625rem;
   padding: 0.5rem 1rem;
   border: 1px solid gray;
 }
@@ -40,7 +40,7 @@
 }
 
 .form-input button svg {
-  width: clamp(1rem, 2vw, 1.25rem); /* 16px → 20px responsivo */
+  width: clamp(1rem, 2vw, 1.25rem);
   height: clamp(1rem, 2vw, 1.25rem);
   color: var(--black);
 }
