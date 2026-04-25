@@ -18,6 +18,10 @@
   --bg-image: url("../../modo-escuro.svg");
 }
 
+html {
+  font-size: 16px; /* base fixa, rem vai sempre partir daqui */
+}
+
 body {
   background-image: var(--bg-image);
   color: var(--black);
@@ -25,6 +29,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .notebook {
@@ -34,5 +41,3 @@ body {
 .App {
   display: flex;
 }
-
-

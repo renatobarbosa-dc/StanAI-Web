@@ -24,7 +24,7 @@ export function Form({ onSubmit }: FormProps) {
           onChange={e => setUrl(e.target.value)}
           placeholder="https://pt.stardewvalleywiki.com/Stardew_Valley_Wiki"
         />
-        <button onClick={handleSubmit}><Send /></button>
+        <button onClick={handleSubmit}></button>
       </div>
 
       <p className='title-forms'>O que você quer saber?</p>

@@ -3,6 +3,8 @@ import { Send } from 'lucide-react'
 import './Chat.css'
 import { PuffLoader } from 'react-spinners'
 
+const pathStan = "src/assets/stan.png"
+
 interface Message {
   role: "user" | "ai"
   content: string
@@ -30,7 +32,7 @@ export function Chat({ messages, wikiUrl, onNewMessage, isTyping }: ChatProps) {
         {messages.map((msg, i) => (
           <div key={i} className={`chat-message ${msg.role}`}>
             {msg.role === "ai" && (
-              <img className="logo-svg small" src="src/assets/maria-teresa.png" />
+              <img className="logo-svg small" src={pathStan} />
             )}
             <div className="chat-bubble">{msg.content}</div>
           </div>

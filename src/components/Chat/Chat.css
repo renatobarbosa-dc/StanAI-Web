@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: -2vh;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -26,7 +26,10 @@
     padding: 0.75rem 1.25rem;
     border-radius: 20px;
     font-weight: 500;
-    width: 100%;
+    word-break: break-word;
+    white-space: normal;
+    align-self: flex-start; /* faz a bubble ter o tamanho do conteúdo */
+    max-width: 100%;        /* mas nunca passa do container */   
   }
   
   .chat-message.ai {
@@ -42,6 +45,8 @@
     border-radius: 20px;
     flex: 1;
     line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
   }
   
   
